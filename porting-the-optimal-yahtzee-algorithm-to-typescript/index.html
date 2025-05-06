@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Porting the optimal yahtzee algorithm to typescript</title>
+    <link rel="canonical" href="https://dwil.xyz/porting-the-optimal-yahtzee-algorithm-to-typescript/">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta property="og:site_name" content="dwil.xyz">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Porting the optimal yahtzee algorithm to typescript">
+    <meta property="og:description" content="A while back I had developed a love for the dice game yahtzee and built a web app to play the game in an individual format. I was interested in a player&#x27;s ability to intuit the probabilistic math at work and push for higher scores. The game I built is">
+    <meta property="og:url" content="https://dwil.xyz/porting-the-optimal-yahtzee-algorithm-to-typescript/">
+    <meta property="og:image" content="https://static.ghost.org/v5.0.0/images/publication-cover.jpg">
+    <meta property="article:published_time" content="2025-05-06T05:23:40.000Z">
+    <meta property="article:modified_time" content="2025-05-06T05:23:40.000Z">
+    <meta property="article:publisher" content="https://www.facebook.com/ghost">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Porting the optimal yahtzee algorithm to typescript">
+    <meta name="twitter:description" content="A while back I had developed a love for the dice game yahtzee and built a web app to play the game in an individual format. I was interested in a player&#x27;s ability to intuit the probabilistic math at work and push for higher scores. The game I built is">
+    <meta name="twitter:url" content="https://dwil.xyz/porting-the-optimal-yahtzee-algorithm-to-typescript/">
+    <meta name="twitter:image" content="https://static.ghost.org/v5.0.0/images/publication-cover.jpg">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Daniel Wilson">
+    <meta name="twitter:site" content="@ghost">
+    <meta property="og:image:width" content="5000">
+    <meta property="og:image:height" content="3500">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "dwil.xyz",
+        "url": "https://dwil.xyz/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://dwil.xyz/favicon.ico",
+            "width": 48,
+            "height": 48
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Daniel Wilson",
+        "url": "https://dwil.xyz/author/daniel/",
+        "sameAs": []
+    },
+    "headline": "Porting the optimal yahtzee algorithm to typescript",
+    "url": "https://dwil.xyz/porting-the-optimal-yahtzee-algorithm-to-typescript/",
+    "datePublished": "2025-05-06T05:23:40.000Z",
+    "dateModified": "2025-05-06T05:23:40.000Z",
+    "description": "A while back I had developed a love for the dice game yahtzee and built a web app to play the game in an individual format. I was interested in a player&#x27;s ability to intuit the probabilistic math at work and push for higher scores. The game I built is based on the standard hasbro yahtzee rules without yahtzee bonuses.\n\nAfter playing the game a few hundred times I thought I had a good sense for an optimal play. I would prioritize the top section ensuring that I got the 35 bonus points and drop lo",
+    "mainEntityOfPage": "https://dwil.xyz/porting-the-optimal-yahtzee-algorithm-to-typescript/"
+}
+    </script>
+
+    <meta name="generator" content="Ghost 5.74">
+    <link rel="alternate" type="application/rss+xml" title="dwil.xyz" href="https://dwil.xyz/rss/">
+    
+    <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/sodo-search.min.js" data-key="6613a43769b0918de9633f8b6b" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css" data-sodo-search="https://dwil.xyz/" crossorigin="anonymous"></script>
+    
+    <link href="https://dwil.xyz/webmentions/receive/" rel="webmention">
+    <script defer src="/public/cards.min.js?v=b68f30a614"></script>
+    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=b68f30a614">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JLGWKBS37D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PGXH48PX5W');
+</script><style>:root {--ghost-accent-color: #FF1A75;}</style>
+
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css?v=b68f30a614" />
+
+</head>
+<body post-template>
+
+<header class="gh-head">
+    <a href="https://dwil.xyz">
+        <h2>dwil.xyz</h2>
+    </a>
+    <ul class="nav">
+    <li class="nav-home"><a href="https://dwil.xyz/">Home</a></li>
+    <li class="nav-about"><a href="https://dwil.xyz/about/">About</a></li>
+    <li class="nav-resume"><a href="http://daniellytle.github.io/files/daniel-wilson-resume.pdf">Resume</a></li>
+    <li class="nav-projects"><a href="https://dwil.xyz/projects/">Projects</a></li>
+</ul>
+
+</header>
+
+<main>
+    
+
+<header class="gh-header">
+    <h1>Porting the optimal yahtzee algorithm to typescript</h1>
+    <div class="gh-post-meta">
+        Daniel Wilson - <time datetime="2025-05-06">6 May 2025</time>
+    </div>
+</header>
+
+<section class="gh-content">
+    <p>A while back I had developed a love for the dice game yahtzee and built a web app to play the game in an individual format. I was interested in a player's ability to intuit the probabilistic math at work and push for higher scores. The game I built is based on the <a href="https://www.hasbro.com/common/instruct/yahtzee.pdf?ref=localhost">standard hasbro yahtzee rules</a> without yahtzee bonuses.</p><p>After playing the game a few hundred times I thought I had a good sense for an optimal play. I would prioritize the top section ensuring that I got the 35 bonus points and drop low probability scores like "Yahtzee" and "Large Straight" if I ever got into trouble. I started looking into algorithms for playing yahtzee better and <a href="http://gunpowder.cs.loyola.edu/~jglenn/research/optimal_yahtzee.pdf?ref=localhost">discovered some research folks had done</a> a few years ago to break down the game and build an optimal strategy.</p><p>The paper is from 2006 when computers were a lot slower than they are now. Without the memory and processing constraints, I was able bring the algorithm into a browser app to guide players along the optimal route as they go.</p><h3 id="the-optimal-yahtzee-algorithm">The optimal yahtzee algorithm</h3><p>Each turn (a player gets random dice then two re-rolls then must select a score slot) can be broken down into an independent widget that links to other future turn widgets. Without using yahtzee bonuses, a widget is defined by the sum of all the top section scores and whether or not each category has been scored yet. A game starts at the first widget (the sum of the top sections is zero and no categories have been scored yet) and ends in ones of 63 final states (the sum of the top sections is between 0 and 63 and all categories are scored). There are only 63 final states because the bonus applied to the top section sum occurs when the sum is 63 or greater. The optimal strategy and expected score value can be computed by computing three mappings within each widget.</p><p>The first is the mapping of outcomes of the final roll to the best score slot available.  This is pretty simple to compute as there are 252 possible rolls. We calculate the "best score slot" as the one with the highest score of the dice + expected score value of the widget that scoring that slot would lead us to. Now we can calculate of all the possible second re-roll decisions, which have the expected score value by considering the likelihood of an outcome and the expected score value of that outcome. From there we can work backward again to get another mapping of outcomes to the optimal first reroll decisions.</p><p>Ultimately we are left with the three mappings that give us the optimal strategy for a widget. 1. Given an initial roll, which re-roll decision is optimal. 2. Given the result of the first reroll, which re-roll decision is optimal. 3. Given the result of fthe second re-roll, which scoring decision is optimal.</p><p>Because each widget depends on knowing the expected values of "downstream" widgets or widgets with more categories filled out, we structure the order in which we process widgets from back to front starting with final game state widgets and ending with the initial game widget. Final game states really only consider the 35 bonus points for the top section sum and have an expected value of 35 only if that sum is 63, otherwise the widget expected value is 0. We can process a widget when we have processed all the potential widgets that the current widget could point to after scoring.</p><h3 id="computation-of-the-game-graph">Computation of the game graph</h3><p>Building the entire game graph means processing the expected score value of every widget. Once we compute the score value of the initial widget we know what score we can expected on average for any game we play. Building the game graph with the current rules (no yahtzee bonus) means processing every possible state of a structure with an integer 0-63 and an array of boolean values representing whether a category has been scored. This number is 64 * (2^13) = 524,288. Thanks to some cleverness recommended in the paper, we can remove all the states where the top section sum is not divisible by the top section scored categories ie. the top sum cannot be 17 when only the "Ones" category is scored. After processing out all impossible states we are left with 363,008.</p><p>Another clever improvement of the algorithm is that when playing the game we only need to keep track of the total expected score value of each widget not the inner data. When playing games of yahtzee we can compute each widget and it's optimal strategy quickly using this expected score value map.</p><p>Currently the graph takes around 35 minutes to build with each widget taking around 7-8ms to process. There is likely potential in multi-threading to accelerate things.</p><h3 id="memory-and-data-encoding">Memory and data encoding</h3><p>Once the game graph is built, it's exported to a json file in the shape of a string to number hash map where the widget state is the key and the expected score number is the value. Currently this json file is XMb. I could likely greatly reduce the size of this file by removing the keys and keeping an implicit ordering to expected score value numbers or reducing the precision of the expected score values.</p><h3 id="reaction-to-playing-with-the-optimal-solution">Reaction to playing with the optimal solution</h3><p>It feels very strange playing with the optimal solution. It feels like the dice are naturally doing what you want when in reality you are just playing a statistical advantage. Certainly the scores are higher and even if you miss one or two recommended moves you're still on the highest possible path moving forward. </p><p>Some of the interesting things I've noticed the algorithm recommending that either affirm or go against my intuition are:</p><ul><li>Score full houses, three-of-a-kinds, and four-of-a-kinds when you get them. I had thought they were fairly common but optimal algorithm likes to score these early in games when they can be found.</li><li>Fill a zero in the yahtzee column if you're stuck, if you can't then zero out the ones and twos.</li></ul><h3 id="contributing">Contributing</h3><p>I have some features I'd like to build out to make the game more interesting, like having the optimal solution not visible but checking with a users actions, or evaluating how many optimal moves a player made after a game.</p><p>If you're interested in contributing make a github issue <a href="https://github.com/daniellytle/yahtzee?ref=localhost">here</a>.</p><p>The game can be viewed <a href="https://dwil.xyz/yahtzee?ref=localhost">here</a>.</p>
+</section>
+
+
+</main>
+
+<footer class="page-footer">
+    <div id="copywrite-message" style="width: 100%; text-align: center; font-weight: 200; font-size: 11px;"></div>
+<script>
+  const currentYear = new Date().getFullYear();
+  const copywriteElement = document.getElementById("copywrite-message");
+  copywriteElement.textContent = `© Copyright Daniel Wilson ${currentYear}`
+</script>
+</footer>
+
+</body>
+</html>
