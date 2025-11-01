@@ -7,7 +7,7 @@
   "database": {
     "client": "mysql",
     "connection": {
-      "host": "localhost",
+      "host": "127.0.0.1",
       "user": "ghost-3",
       "database": "blog_prod",
       "password": "!b2k5YhqoZN16WCl8hxY"

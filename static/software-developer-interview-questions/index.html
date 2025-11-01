@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Software engineer interview questions</title>
+    <link rel="canonical" href="https://dwil.xyz/software-developer-interview-questions/">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta property="og:site_name" content="dwil.xyz">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Software engineer interview questions">
+    <meta property="og:description" content="I intend to keep this as a reference of all the interview questions I have experienced in my career.
+
+
+Coding Challenges
+
+These challenges are often posed in a live coding environment like coderpad. Often they can be found with a large test suite on leetcode or hackerrank.
+
+
+Maximum Profit in">
+    <meta property="og:url" content="https://dwil.xyz/software-developer-interview-questions/">
+    <meta property="og:image" content="https://static.ghost.org/v5.0.0/images/publication-cover.jpg">
+    <meta property="article:published_time" content="2024-04-16T20:53:16.000Z">
+    <meta property="article:modified_time" content="2025-05-16T07:01:26.000Z">
+    <meta property="article:publisher" content="https://www.facebook.com/ghost">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Software engineer interview questions">
+    <meta name="twitter:description" content="I intend to keep this as a reference of all the interview questions I have experienced in my career.
+
+
+Coding Challenges
+
+These challenges are often posed in a live coding environment like coderpad. Often they can be found with a large test suite on leetcode or hackerrank.
+
+
+Maximum Profit in">
+    <meta name="twitter:url" content="https://dwil.xyz/software-developer-interview-questions/">
+    <meta name="twitter:image" content="https://static.ghost.org/v5.0.0/images/publication-cover.jpg">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Daniel Wilson">
+    <meta name="twitter:site" content="@ghost">
+    <meta property="og:image:width" content="5000">
+    <meta property="og:image:height" content="3500">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "dwil.xyz",
+        "url": "https://dwil.xyz/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://dwil.xyz/favicon.ico"
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Daniel Wilson",
+        "url": "https://dwil.xyz/author/daniel/",
+        "sameAs": []
+    },
+    "headline": "Software engineer interview questions",
+    "url": "https://dwil.xyz/software-developer-interview-questions/",
+    "datePublished": "2024-04-16T20:53:16.000Z",
+    "dateModified": "2025-05-16T07:01:26.000Z",
+    "description": "I intend to keep this as a reference of all the interview questions I have experienced in my career.\n\n\nCoding Challenges\n\nThese challenges are often posed in a live coding environment like coderpad. Often they can be found with a large test suite on leetcode or hackerrank.\n\n\nMaximum Profit in Job Scheduling\n\nhttps://leetcode.com/problems/maximum-profit-in-job-scheduling/description\n\nNaive Solution - Recursion\nBase Case - No more future jobs, return current profit\nRecursive case - Return the max ",
+    "mainEntityOfPage": "https://dwil.xyz/software-developer-interview-questions/"
+}
+    </script>
+
+    <meta name="generator" content="Ghost 5.74">
+    <link rel="alternate" type="application/rss+xml" title="dwil.xyz" href="https://dwil.xyz/rss/">
+    
+    <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/sodo-search.min.js" data-key="6613a43769b0918de9633f8b6b" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css" data-sodo-search="https://dwil.xyz/" crossorigin="anonymous"></script>
+    
+    <link href="https://dwil.xyz/webmentions/receive/" rel="webmention">
+    <script defer src="/public/cards.min.js?v=641c05655d"></script>
+    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=641c05655d">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JLGWKBS37D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PGXH48PX5W');
+</script><style>:root {--ghost-accent-color: #FF1A75;}</style>
+
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css?v=641c05655d" />
+
+</head>
+<body post-template>
+
+<header class="gh-head">
+    <a href="https://dwil.xyz">
+        <h2>dwil.xyz</h2>
+    </a>
+    <ul class="nav">
+    <li class="nav-home"><a href="https://dwil.xyz/">Home</a></li>
+    <li class="nav-about"><a href="https://dwil.xyz/about/">About</a></li>
+    <li class="nav-resume"><a href="http://daniellytle.github.io/files/daniel-wilson-resume.pdf">Resume</a></li>
+    <li class="nav-projects"><a href="https://dwil.xyz/projects/">Projects</a></li>
+</ul>
+
+</header>
+
+<main>
+    
+
+<header class="gh-header">
+    <h1>Software engineer interview questions</h1>
+    <div class="gh-post-meta">
+        Daniel Wilson - <time datetime="2024-04-16">16 Apr 2024</time>
+    </div>
+</header>
+
+<section class="gh-content">
+    <p>I intend to keep this as a reference of all the interview questions I have experienced in my career.</p><h2 id="coding-challenges">Coding Challenges</h2><p>These challenges are often posed in a live coding environment like coderpad. Often they can be found with a large test suite on leetcode or hackerrank.</p><h3 id="maximum-profit-in-job-scheduling">Maximum Profit in Job Scheduling</h3><p><a href="https://leetcode.com/problems/maximum-profit-in-job-scheduling/description?ref=localhost">https://leetcode.com/problems/maximum-profit-in-job-scheduling/description</a></p><p><strong>Naive Solution - Recursion</strong><br>Base Case - No more future jobs, return current profit<br>Recursive case - Return the max of two calls:</p><ol><li>Including the current job profit in the call and finding the next schedulable job</li><li>Excluding the current job and call with the next starting job</li></ol><p>First call this function on the first job with 0 profit.</p><p><strong>Better Solution - Dynamic Programming</strong><br>Keep an array of the maximum possible profit at index X of the jobs array sorted by end_time</p><ul><li>Sorting by end_time lets us use our DP array to track maximum possible profit at that jobs end time.</li></ul><p>Write a loop through the 1…end of the jobs sorted by end_time and set the maximum profit at the current jobs end_time to be the max of:</p><ul><li>(include the job) current job profit + possible previous profit</li><li>(exclude the job) max profit of the job before</li></ul><p>possible previous profit is found by finding the latest job ending at or before the start time of the job we are currently looking at.</p><p>Max profit of the job before just means dp[x - 1]</p><pre><code class="language-ruby"># @param {Integer[]} start_time
+# @param {Integer[]} end_time
+# @param {Integer[]} profit
+# @return {Integer}
+def job_scheduling(start_times, end_times, profits)
+    # combine data and sort by end_time
+    jobs = start_times.map.with_index{|st, i| [st, end_times[i], profits[i]]}.sort{|a, b| a[1] &lt;=&gt; b[1]}
+    start_times = jobs.map{|x| x[0]}
+    end_times = jobs.map{|x| x[1]}
+    profits = jobs.map{|x| x[2]}
+    # initialize
+    sorted_end_times_to_inputs = end_times.map.with_index{|e, i| [e, i]}
+    max_profits = [0] * start_times.length
+    max_profits[0] = profits[0]
+    # dp loop
+    (1...(start_times.length)).to_a.each do |job_index|
+        previous_job_index = latest_possible_previous_job(job_index, start_times[job_index], sorted_end_times_to_inputs)
+        previous_max = previous_job_index != nil ? max_profits[previous_job_index] : 0
+        # set max profits to max of include and exclude
+        max_profits[job_index] = [
+            profits[job_index] + previous_max, # include + max before chosen
+            max_profits[job_index - 1] # don't include
+        ].max
+    end
+    max_profits.last
+end
+
+def latest_possible_previous_job(index, start_time, sorted_end_times_to_inputs)
+    # puts sorted_end_times_to_inputs.reverse.map{|s| s[0]}.join(" ") 
+    i = sorted_end_times_to_inputs[0, index + 1].reverse.bsearch{|end_time| end_time[0] &lt;= start_time}
+    return nil if i == nil
+    # puts "index: #{index}, start_time: #{start_time}, output: #{i[1]}"
+    return i[1]
+end
+</code></pre><h3 id="minimum-path-sum-in-a-2d-grid">Minimum path sum in a 2d grid</h3><p><strong>Solution: Dynamic Programming</strong><br>min sum path of a square is the minimum of the two square to the up and left of it. Iterate through all squares computing the min sum path for each. O(squares)</p><pre><code class="language-ruby"># @param {Integer[][]} grid
+# @return {Integer}
+def min_path_sum(grid)
+    # initialize
+    max_sum_dp = [[0] * grid[0].length] * grid.length
+    max_sum_dp[0][0] = grid[0][0]
+    # dp loop
+    (1...(grid.length * grid[0].length)).to_a.each do |i|
+        x = i % grid[0].length
+        y = i / grid[0].length
+        up_val = y &gt; 0 ? max_sum_dp[y - 1][x] : nil # up
+        left_val = x &gt; 0 ? max_sum_dp[y][x - 1] : nil # left
+        max_sum_dp[y][x] = [
+            up_val,
+            left_val
+        ].filter{|v| v != nil}.min + grid[y][x]
+    end
+    max_sum_dp.last.last
+end
+</code></pre><h3 id="question-3implement-serializationdeserialization-for-a-tree-data-structure">Question 3 - Implement serialization/deserialization for a tree data structure.</h3><p><a href="https://leetcode.com/problems/serialize-and-deserialize-binary-tree/description/?ref=localhost">https://leetcode.com/problems/serialize-and-deserialize-binary-tree/description/</a></p><p>Rather Tough: BFS to serialize pushing output into array</p><p>Deserialize by doing BFS and lookups into the array</p><pre><code class="language-ruby"># TODO
+</code></pre><p><strong>Followup: Do the problem with N-ary trees</strong></p><h3 id="question-4given-a-restaurant-name-find-other-restaurants-in-the-list-that-are-k-anagrams-with-each-other">Question 4 - Given a restaurant name, find other restaurants in the list that are k-anagrams with each other.</h3><p>A name is a k-anagram with another name if both the conditions below are true: The names contain the same number of characters. The names can be turned into anagrams by changing at most k characters in the string For example: name = "grammar", k = 3 and list = ["anagram"], "grammar" is k-anagram with "anagram" since they contain the same number of characters and you can change 'r' to 'n' and 'm' to 'a'. name = "omega grill", k = 2 and list = ["jmega frill"], "omega grill" is k-anagram with "jmega frill" since they contain same number of characters and you can change 'o' to 'j' and 'g' to 'f’</p><p><strong>Solution:</strong></p><pre><code class="language-ruby">def get_char_map(str)
+	char_count = {}
+	name.chars.each{|c| char_count[c] = (char_count[c] || 0) + 1}
+	char_count
+end
+
+def k_anagrams_in_list(name, k, list)
+	# find names in list with same # of chars
+	same_len_names = list.filter{|n| n.length == name.length}
+	# process some name data
+	char_count = get_char_map(name)
+	name_set = Set(name.chars)
+	# find k-anagrams
+	same_len_names.filter{|n|
+		diff = 0
+		candidate_count = get_char_map(n)
+		name_set.each{|c|
+			diff += (char_count[c] - (candidate_count[c] || 0)
+			if (diff &gt; k)
+				break
+			end
+		}
+		return diff &lt;= k
+	}
+end
+</code></pre><h3 id="question-5binary-tree-maximum-path-sum">Question 5 - Binary Tree Maximum Path Sum</h3><p><a href="https://leetcode.com/problems/binary-tree-maximum-path-sum/description/?ref=localhost">https://leetcode.com/problems/binary-tree-maximum-path-sum/description/</a></p><p>Solution is to use a recursive helper function that does the following</p><ul><li>Base Case: Node nil? return 0</li><li>Compute the max path at current node<ul><li>max (0, left side recursive call) + max (0, right side recursive call) + node.val</li></ul></li><li>Compare against global maximum (this might be the root node of our max path)</li><li>Return the sum of the greatest path connecting current node to parent<ul><li>max (left_side + node.val, right_side + node.val)</li></ul></li></ul><p>Call the recursive function on the root node and your global max will be updated to the max path value.</p><pre><code class="language-ruby"># Definition for a binary tree node.
+# class TreeNode
+#     attr_accessor :val, :left, :right
+#     def initialize(val = 0, left = nil, right = nil)
+#         @val = val
+#         @left = left
+#         @right = right
+#     end
+# end
+# @param {TreeNode} root
+# @return {Integer}
+def max_path_sum(root)
+    # ruby hack to pass by reference
+    data_hash = { 'max' =&gt; root.val }
+    max_path_subtree(root, data_hash)
+    data_hash['max']
+end
+
+def max_path_subtree(node, data_hash)
+    if node == nil
+        return 0
+    end
+    # calculate max sum at node
+    left_sum = [0, max_path_subtree(node.left, data_hash)].max
+    right_sum = [0, max_path_subtree(node.right, data_hash)].max
+    sum = left_sum + right_sum + node.val
+    # update global max
+    data_hash['max'] = [data_hash['max'], sum].max
+    # return max path that connects node to parent
+    return [left_sum + node.val, right_sum + node.val].max
+end
+</code></pre><h3 id="min-time-path">Min Time Path</h3><p>There is an <strong>n </strong>x <strong>n</strong> map where grid[i][j] represents the number of obstacles in the position (i, j).  In every unit of time, the number of obstacles in every position will be decreased by one. Every position with one or more obstacles is not accessible. <br>Assume you are a dasher at DoorDash. You can drive from one position to another 4-directionally adjacent position (up/down/left/right) if and only if the position is accessible. You will start at the top left position (0, 0) and your goal is to reach the bottom right position (n-1, n-1). Assuming you can drive infinite distances in zero time, what would be the least time that you can reach the destination? </p><pre><code># Example
+# 0  1  2  3  4 
+# 24 16 22 21 5 
+# 12 13 14 15 23
+# 11 17 18 19 20
+# 10 9  8  7  6 
+
+# Input: grid = [[0,1,2,3,4],[24,16,22,21,5],[12,13,14,15,23],[11,17,18,19,20],[10,9,8,7,6]]
+# Correct Path: 0, 1, 16, 13, 12, 11, 10, 9, 8, 7, 6
+# Output: 16</code></pre><p>Since you can instantly move along the first path that opens to the end spot on the grid, the problem can be better understood as finding the path with the smallest maximum value of the individual spaces. When this maximum value of time passes this path opens up and we can instantly move to the finish.</p><p>This is accomplished by doing priority BFS from our start node. Since our queue of spots to visit will be sorted in increasing order, we can keep one rolling maximum of the highest value seen yet along our search. Once we've hit our finish grid, this rolling maximum will be the highest value seen yet on a path from the start to the finish.</p><pre><code>require 'set'
+
+def min_time_path(grid)
+  seen = Set[[0, 0]]
+  # BFS using priority queue by value
+  queue = [[grid[0][0], 0, 0]]
+  max = grid[0][0]
+  while !queue.empty?
+    val, x, y = *queue.shift
+    max = [max, val].max
+    # Are we at the bottom right?
+    if grid[y][x] == grid.last.last
+      return max
+    end
+    # Add unseen neighbors to queue
+    unseen_neighbors = get_unseen_neighbors(seen, x, y, grid)
+    unseen_neighbors.each do |neighbor|
+      n_x, n_y = *neighbor
+      seen.add([n_x, n_y])
+      n_val = grid[n_x][n_y]
+      index = queue.bsearch_index{|item| item[0] &gt;= n_val }
+      if index == nil
+        queue += [[n_val, n_x, n_y]]
+      else
+        queue.insert(index, [n_val, n_x, n_y])
+      end
+    end
+  end
+end
+
+def get_unseen_neighbors(seen, x, y, grid)
+  [[x - 1, y], [x + 1, y], [x, y + 1], [x, y - 1]].filter{ |x, y|
+    !seen.include?([x, y]) &amp;&amp; inbounds(x, y, grid.length)
+  }
+end
+
+def inbounds(x, y, boundary)
+  x &gt;= 0 &amp;&amp; x &lt; boundary &amp;&amp; y &gt;= 0 &amp;&amp; y &lt; boundary
+end</code></pre><h2 id="system-design-problems">System Design Problems</h2><p>These problems are usually discussed with an engineer. Interviewers are looking for candidates to challenge assumptions, refine system requirements, and explain tradeoffs when making system design decisions.</p><h3 id="design-a-3-day-promotional-event">Design a 3-day Promotional Event</h3><p>Say if DoorDash along with other partners across US is sponsoring for 3-day charity event where huge participation of more than 3 million customers are expected to participate and simply donate money. You were responsible to design an app for this. How would you go about it?</p><h3 id="design-an-image-file-sharing-service">Design an Image File Sharing Service</h3><p>Design a system where users can log in, upload photos, and create albums.</p><h3 id="design-a-task-scheduler-system">Design a Task Scheduler system</h3><p>Design a distributes scheduler-as-a-service. The schedule exposes an API to schedule tasks based on a cron format (can be one-off or periodic tasks). The tasks are described in the form of a REST call (URL, method, body) to a service endpoint that will ultimately execute the logic. The schedule will not have single points of failure and will be highly scalable (should be able to execute hundreds of millions of tasks per day).</p><figure class="kg-card kg-image-card"><img src="https://dwil.xyz/content/images/2024/04/image.png" class="kg-image" alt loading="lazy" width="2000" height="2084" srcset="https://dwil.xyz/content/images/size/w600/2024/04/image.png 600w, https://dwil.xyz/content/images/size/w1000/2024/04/image.png 1000w, https://dwil.xyz/content/images/size/w1600/2024/04/image.png 1600w, https://dwil.xyz/content/images/size/w2400/2024/04/image.png 2400w" sizes="(min-width: 720px) 720px"></figure><h2 id="behavioral-questions">Behavioral Questions</h2><p>These questions are often posed to get a data point on how a candidate deals with cross-functional collaboration and how they communicate. It's a good practice to memorize a few technical highlights from your career to draw on when answering these questions</p><h3 id="describe-a-project-that-you-think-went-very-well">Describe a project that you think went very well...</h3><p><em>Follow up: "How could it have gone even better?"</em></p><h3 id="describe-a-time-you-received-feedback-how-did-you-respond-to-that-feedback">Describe a time you received feedback. How did you respond to that feedback?</h3><p></p><h3 id="describe-a-time-you-experienced-a-conflict-with-someone-how-was-it-resolved">Describe a time you experienced a conflict with someone. How was it resolved?</h3><p></p><h3 id="describe-a-bad-mistake-taking-down-production-etc-how-was-it-remedied-what-did-you-do-to-make-sure-it-didnt-happen-again">Describe a bad mistake (taking down production etc). How was it remedied? What did you do to make sure it didn't happen again.</h3><p></p><h3 id="there-is-an-issue-with-a-delivery-system-and-missing-items-store-didnt-have-it-deliverer-forgot-it-it-was-never-added-to-the-order-how-you-would-go-about-solving-this-issue">There is an issue with a delivery system and missing items (store didn't have it, deliverer forgot it, it was never added to the order). How you would go about solving this issue?</h3>
+</section>
+
+
+</main>
+
+<footer class="page-footer">
+    <div id="copywrite-message" style="width: 100%; text-align: center; font-weight: 200; font-size: 11px;"></div>
+<script>
+  const currentYear = new Date().getFullYear();
+  const copywriteElement = document.getElementById("copywrite-message");
+  copywriteElement.textContent = `© Copyright Daniel Wilson ${currentYear}`
+</script>
+</footer>
+
+</body>
+</html>

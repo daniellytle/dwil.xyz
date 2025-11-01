@@ -1,1 +1,7 @@
 **/node_modules
+content
+versions
+files
+.ghostpid
+config.production.json
+.DS_Store

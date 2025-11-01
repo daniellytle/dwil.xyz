@@ -60,6 +60,7 @@ class DatabaseStateManager {
 
             // CASE: database connection errors, unknown cases
             let errorToThrow = error;
+            console.log("ERROR FOUND!", error.message)
             if (!errors.utils.isGhostError(errorToThrow)) {
                 errorToThrow = new errors.InternalServerError({message: errorToThrow.message, err: errorToThrow});
             }

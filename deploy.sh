@@ -1,1 +1,1 @@
-gh-pages -b main -d static
+gh-pages -b gh-pages -d static --cname "dwil.xyz"
