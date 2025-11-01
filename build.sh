@@ -1,9 +1,9 @@
-gssg --url 'https://dwil.xyz'
+gssg --dest docs --url 'https://dwil.xyz'
 
 echo "Cleaning static files.."
-rm -rf static/files
-mkdir -p static/files
+rm -rf docs/files
+mkdir -p docs/files
 echo "Copying static files.."
-cp -r files static
+cp -r files docs
 echo "Setting up custom domain"
-echo "dwil.xyz" > static/CNAME
+echo "dwil.xyz" > docs/CNAME
